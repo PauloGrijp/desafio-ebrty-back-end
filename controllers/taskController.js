@@ -6,9 +6,9 @@ const routes = Router();
 routes.post('/', async (req, res) => {
   try {
     const { task, status } = req.body;
-    await taskModel.create({ task, status });
+    const newTask = await taskModel.create({ task, status });
 
-    return res.status(201).send();
+    return res.status(201).json(newTask);
   } catch (error) {
     res.status(500).json({ error: error.message })
   }

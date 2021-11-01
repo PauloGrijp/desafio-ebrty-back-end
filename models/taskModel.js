@@ -6,14 +6,19 @@ const create = async ({ task, status }) => {
   const newTask = await db.collection('tasks')
     .insertOne({ task, status, createAt: new Date() });
   
-  return newTask;
+  return {task: {
+    _id: newTask.insertedId,
+    task,
+    status,
+    createAt: new Date(),
+  }};
 }
 
 const getALl = async () => {
   const db = await connection();
   const tasks = await db.collection('tasks').find().toArray();
 
-  return tasks;
+  return { task: tasks };
 }
 
 const update = async (id, status) => {
