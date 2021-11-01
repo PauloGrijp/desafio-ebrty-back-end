@@ -22,6 +22,18 @@ routes.get('/', async (_req, res) => {
   } catch (error) {
     res.status(500).json({ error:error.message })
   }
+});
+
+routes.delete('/:id', async (req, res) => {
+  try {
+    const { id } = req.params;
+  
+    await taskModel.destroy(id);
+
+    return res.status(204).send();
+  } catch (error) {
+    res.status(500).json({ error:error.message })
+  }
 })
 
 module.exports = routes;
