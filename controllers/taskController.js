@@ -12,7 +12,16 @@ routes.post('/', async (req, res) => {
   } catch (error) {
     res.status(500).json({ error: error.message })
   }
+});
 
+routes.get('/', async (_req, res) => {
+  try {
+    const tasks = await taskModel.getALl();
+
+    return res.status(200).json(tasks);
+  } catch (error) {
+    res.status(500).json({ error:error.message })
+  }
 })
 
 module.exports = routes;

@@ -8,6 +8,14 @@ const create = async ({ task, status }) => {
   return newTask;
 }
 
+const getALl = async () => {
+  const db = await connection();
+  const tasks = await db.collection('tasks').find().toArray();
+
+  return tasks;
+}
+
 module.exports = {
-  create
+  create,
+  getALl
 }
