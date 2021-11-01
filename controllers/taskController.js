@@ -24,6 +24,19 @@ routes.get('/', async (_req, res) => {
   }
 });
 
+routes.put('/:id', async (req, res) => {
+  try {
+    const { id } = req.params;
+    const { status } = req.body;
+
+    await taskModel.update(id, status);
+
+    return res.status(201).send()
+  } catch (error) {
+    res.status(500).json({ error: error.message })
+  }
+})
+
 routes.delete('/:id', async (req, res) => {
   try {
     const { id } = req.params;

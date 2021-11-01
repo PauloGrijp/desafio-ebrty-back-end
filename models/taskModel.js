@@ -16,6 +16,14 @@ const getALl = async () => {
   return tasks;
 }
 
+const update = async (id, status) => {
+  if (!ObjectId.isValid(id)) return null;
+
+  const db = await connection();
+  await db.collection('tasks')
+    .updateOne({ _id: ObjectId(id) }, { $set: { status } })
+}
+
 const destroy = async (id) => {
   if (!ObjectId.isValid(id)) return null;
 
@@ -26,5 +34,6 @@ const destroy = async (id) => {
 module.exports = {
   create,
   getALl,
+  update,
   destroy,
 }
