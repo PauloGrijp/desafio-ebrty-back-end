@@ -6,7 +6,6 @@
 
 - [Sobre o projeto](#-sobre-o-projeto)
 - [Funcionalidades](#-funcionalidades)
-- [Layout](#-layout)
 - [Como executar o projeto](#-como-executar-o-projeto)
   - [Pré-requisitos](#pré-requisitos)
   - [Rodando a aplicação web (Frontend)](#user-content--rodando-a-aplicação-web-frontend)
@@ -47,7 +46,7 @@ $ yarn run dev ou npm run dev
 
 ```
 
-Após rodar o back-end, execute o <a href="https://github.com/PauloGrijp/desafio-ebrty-front-end">back-end<a> (link do repositório)
+Após rodar o back-end, execute o <a href="https://github.com/PauloGrijp/desafio-ebrty-front-end">front-end<a> (link do repositório)
 
 ---
 
