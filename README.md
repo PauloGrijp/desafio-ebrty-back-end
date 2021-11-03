@@ -21,7 +21,7 @@ O desafio foi proposto para criar um todo list. Nele, foi desenvolvido tanto fro
 
 Este repositório diz respeito ao back-end, que foi desenvolvido com nodeJs e MongoDB.
 
-O <a href="https://github.com/PauloGrijp/desafio-ebrty-front-end">back-end<a> foi desenvolvido com ReactJs e styled-components.
+O <a href="https://github.com/PauloGrijp/desafio-ebrty-front-end">front-end<a> foi desenvolvido com ReactJs e styled-components.
 
 ---
 
